@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main
 {
+    int a;
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
@@ -9,6 +10,10 @@ public class Main
         int a = sc.nextInt();
         String   str = checkBit(a);
         System.out.println(" Ваше число в двоичном представлении будет " + str);
+        str  = checkBit(Integer.parseInt(str.trim()));
+        System.out.println(" Ваше число в двоичном представлении будет " + str);
+
+
     }
         private static  String checkBit(int a)
         {
