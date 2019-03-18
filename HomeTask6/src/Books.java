@@ -1,11 +1,11 @@
-public class Book1 {
+public class Books {
     private Book[] book;
     int index = -1;
 
-    public Book1() {
+    public Books() {
     }
 
-    public Book1(int size) {
+    public Books(int size) {
         book = new Book[size];
     }
 
@@ -47,10 +47,10 @@ public class Book1 {
         return size;
     }
 
-    public Book1 findSinceYear(int year) {
+    public Books findSinceYear(int year) {
         int size = count(year);
         if (size > 0) {
-            Book1 list = new Book1(size);
+            Books list = new Books(size);
             for (int a = 0; a <= index; a++) {
                 if (book[a].getYear() >= year) {
                     list.addBook(book[a]);
@@ -59,7 +59,7 @@ public class Book1 {
             return list;
         } else {
             System.out.println("Не найдено книг старше этого года");
-            return new Book1(0);
+            return new Books(0);
         }
     }
 
@@ -74,10 +74,10 @@ public class Book1 {
     }
 
 
-    public Book1 findByAuthor(String author) {
+    public Books findByAuthor(String author) {
         int size = count(author);
         if (size > 0) {
-            Book1 list = new Book1(size);
+            Books list = new Books(size);
             for (int a = 0; a <= index; a++) {
                 if (book[a].getAuthor().equals(author)) {
                     list.addBook(book[a]);
@@ -86,7 +86,7 @@ public class Book1 {
             return list;
         } else {
             System.out.println("Нет книг с именем данного автора");
-            return new Book1(0);
+            return new Books(0);
         }
     }
 }
