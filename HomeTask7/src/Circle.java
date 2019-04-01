@@ -14,3 +14,4 @@ public class Circle extends Shape {
     public double calcArea() {
         return 3.141592653589793D * this.radius * this.radius;
     }
+}
